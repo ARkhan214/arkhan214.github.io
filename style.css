@@ -6,18 +6,17 @@
 }
 
 :root {
-    --primary-color: #007BFF;
-    --secondary-color: #28a745;
+    --primary-color: #007BFF; /* Blue */
+    --secondary-color: #28a745; /* Green */
     --text-color: #333;
     --light-bg: #f8f9fa;
     --dark-bg: #212529;
     --white: #fff;
-    --font-bengali: 'Tiro Bangla', serif;
     --font-sans: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: var(--font-bengali), var(--font-sans);
+    font-family: var(--font-sans);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
@@ -26,16 +25,13 @@ body {
 
 /* Typography & Headings */
 h1, h2, h3 {
-    font-family: var(--font-bengali), var(--font-sans);
+    font-family: var(--font-sans);
     margin-bottom: 1rem;
     color: var(--dark-bg);
 }
-h2 {
-    font-size: 2.5rem;
-}
-p {
-    margin-bottom: 1rem;
-}
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
 
 /* Layout & Sections */
 .section {
@@ -75,6 +71,8 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .logo {
     font-size: 1.5rem;
@@ -107,12 +105,14 @@ p {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 100px 5%;
     background-color: var(--white);
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .hero-content {
-    max-width: 60%;
+    max-width: 50%;
 }
 .hero-content h1 {
     font-size: 4rem;
@@ -141,7 +141,7 @@ p {
 
 /* Buttons */
 .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin-right: 1rem;
     text-decoration: none;
     border-radius: 5px;
@@ -150,6 +150,7 @@ p {
     border: none;
     cursor: pointer;
     font-weight: 500;
+    text-transform: uppercase;
 }
 .primary-btn {
     background-color: var(--primary-color);
@@ -214,8 +215,11 @@ p {
     margin-bottom: 1rem;
 }
 .skill-category ul {
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
+}
+.skill-category li {
+    padding: 5px 0;
 }
 
 /* Portfolio Section */
@@ -243,6 +247,7 @@ p {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
+    margin-right: 10px;
 }
 
 /* Experience Section (Timeline) */
@@ -267,7 +272,12 @@ p {
     background-color: inherit;
     width: 50%;
 }
-.timeline-item::after {
+/* Right side */
+.timeline-item:nth-child(odd) {
+    text-align: right;
+    left: 0;
+}
+.timeline-item:nth-child(odd)::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -279,14 +289,34 @@ p {
     border-radius: 50%;
     z-index: 1;
 }
+/* Left side */
 .timeline-item:nth-child(even) {
     left: 50%;
 }
 .timeline-item:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
     left: -16px;
+    background-color: var(--white);
+    border: 4px solid var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
 }
 .timeline-item h3 {
     color: var(--primary-color);
+}
+.timeline-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left; /* Align list items left within the container */
+}
+.timeline-item:nth-child(odd) ul {
+    padding-right: 20px;
+    text-align: right;
+    list-style-position: inside;
 }
 
 /* Education Section */
@@ -302,6 +332,7 @@ p {
     background: var(--white);
     border-left: 5px solid var(--secondary-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 5px;
 }
 .edu-item h3 {
     margin-bottom: 0.5rem;
@@ -321,7 +352,7 @@ p {
     padding: 2rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 .service-card:hover {
     background-color: var(--primary-color);
@@ -389,6 +420,11 @@ p {
 .blog-post h3 {
     color: var(--primary-color);
 }
+.blog-post a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
 
 /* CTA/Resume Section */
 .cta {
@@ -402,6 +438,9 @@ p {
 }
 
 /* Fun Facts Section */
+.fun-facts {
+    background-color: var(--light-bg);
+}
 .fact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -420,6 +459,10 @@ p {
     font-size: 3rem;
     color: var(--secondary-color);
 }
+.fact-card p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 /* Contact Section */
 .contact-form {
@@ -430,15 +473,21 @@ p {
     gap: 1rem;
 }
 .contact-form input, .contact-form textarea {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: inherit;
     font-size: 1rem;
+    outline: none;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 .message-text {
     text-align: center;
     font-weight: 500;
+    margin-top: 1rem;
 }
 .social-links {
     text-align: center;
@@ -447,17 +496,21 @@ p {
     margin: 0 10px;
     color: var(--primary-color);
     text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #0056b3;
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--dark-bg);
     color: var(--white);
     font-size: 0.9rem;
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 992px) {
@@ -518,19 +571,19 @@ p {
     }
     
     .timeline::after {
-        left: 31px;
+        left: 31px; /* Center the line for mobile */
     }
     .timeline-item {
         width: 100%;
         padding-left: 60px;
         padding-right: 15px;
     }
-    .timeline-item::before {
-        left: 60px;
-        margin-left: -60px;
+    .timeline-item:nth-child(odd) {
+        text-align: left;
     }
-    .timeline-item::after {
+    .timeline-item:nth-child(odd)::after {
         left: 18px;
+        right: auto;
     }
     .timeline-item:nth-child(even) {
         left: 0;
@@ -538,7 +591,15 @@ p {
     .timeline-item:nth-child(even)::after {
         left: 18px;
     }
-
+    .timeline-item ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .timeline-item:nth-child(odd) ul {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 0;
+    }
     .about-content {
         flex-direction: column;
     }
