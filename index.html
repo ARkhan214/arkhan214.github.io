@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Rahim Khan | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Z_5G4x1ZCxTiOHA4K",
+            });
+        })();
+    </script>
 </head>
+
 <body>
 
     <header class="header">
@@ -46,14 +57,17 @@
                 <a href="#portfolio" class="btn secondary-btn">View Projects</a>
             </div>
             <div class="hero-image">
-                <img src="placeholder_image.jpg" alt="Md. Rahim Khan Profile Picture">
+                <img src="./photo/Md Rahim Khan.jpg" alt="Md. Rahim Khan Profile Picture">
             </div>
         </section>
 
         <section id="about" class="about section bg-light">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>My name is **Md. Rahim Khan**. I am an experienced **Full Stack Developer** with 5+ years of hands-on experience creating efficient and scalable solutions using modern web technologies. My expertise lies in the **MERN/MEAN Stack**, where I focus not only on robust coding but also on excellent user experience (UX) and application performance.</p>
+                <p>My name is **Md. Rahim Khan**. I am an experienced **Full Stack Developer** with 5+ years of hands-on
+                    experience creating efficient and scalable solutions using modern web technologies. My expertise
+                    lies in the **MERN/MEAN Stack**, where I focus not only on robust coding but also on excellent user
+                    experience (UX) and application performance.</p>
                 <div class="about-details">
                     <p><strong>Name:</strong> Md. Rahim Khan</p>
                     <p><strong>Profession:</strong> Full Stack Developer</p>
@@ -174,21 +188,24 @@
             <h2 class="section-title">Testimonials</h2>
             <div class="testimonial-slider">
                 <div class="testimonial-card">
-                    <p>"Rahim is an extremely dedicated and proficient developer. His code quality is always top-notch and reliable."</p>
+                    <p>"Rahim is an extremely dedicated and proficient developer. His code quality is always top-notch
+                        and reliable."</p>
                     <h4>- Mr. Karim Ahmed, CEO, XYZ Corporation</h4>
                 </div>
                 <div class="testimonial-card">
-                    <p>"He ensured excellent performance and delivered the project well within the tight deadline. Highly recommend."</p>
+                    <p>"He ensured excellent performance and delivered the project well within the tight deadline.
+                        Highly recommend."</p>
                     <h4>- Ms. Farzana Begum, Project Manager</h4>
                 </div>
             </div>
         </section>
-        
+
         <section id="awards" class="awards section">
             <h2 class="section-title">Awards & Achievements</h2>
             <ul>
                 <li><strong>Best Developer of the Year 2024</strong> (Tech Solutions Ltd.)</li>
-                <li><strong>Community Contributor Award</strong> (Recognized on GitHub for open-source contributions)</li>
+                <li><strong>Community Contributor Award</strong> (Recognized on GitHub for open-source contributions)
+                </li>
                 <li><strong>10+ Successful Project Deployments</strong> (Showcased in the portfolio)</li>
             </ul>
         </section>
@@ -211,10 +228,11 @@
 
         <section id="resume" class="cta section">
             <h2 class="section-title">Have a Project in Mind?</h2>
-            <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to life.</p>
+            <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to life.
+            </p>
             <a href="cv/cv.pdf" download class="btn primary-btn">Download Resume</a>
         </section>
-        
+
         <section id="fun-facts" class="fun-facts section">
             <h2 class="section-title">Fun Facts About Me</h2>
             <div class="fact-grid">
@@ -237,6 +255,7 @@
             <h2 class="section-title">Contact Me</h2>
             <form id="contact-form" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="subject" placeholder="Subject">
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn primary-btn">Send Message</button>
@@ -256,4 +275,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
