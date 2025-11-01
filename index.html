@@ -9,13 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "Z_5G4x1ZCxTiOHA4K",
-            });
-        })();
-    </script>
+
 </head>
 
 <body>
@@ -251,6 +245,8 @@
             </div>
         </section>
 
+        <!-- Contact Section start -->
+
         <section id="contact" class="contact section bg-light">
             <h2 class="section-title">Contact Me</h2>
             <form id="contact-form" class="contact-form">
@@ -267,6 +263,39 @@
                 <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
             </div>
         </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "Z_5G4x1ZCxTiOHA4K",
+                });
+            })();
+
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const statusDiv = document.getElementById("form-message");
+                statusDiv.innerHTML = "<p style='color:#ffc107;'>⏳ Sending message...</p>";
+
+                // ✅ Using your actual Service ID and Template ID
+                emailjs.sendForm("service_xtib79s", "template_0o18lij", this)
+                    .then(() => {
+                        statusDiv.innerHTML = "<p style='color:#28a745;'>✅ Message sent successfully! Check your Gmail inbox.</p>";
+                        this.reset();
+                    }, (error) => {
+                        console.error("❌ EmailJS Error Details:", error);
+                        statusDiv.innerHTML = `<p style='color:#dc3545;'>❌ Failed: ${error.text || "Please try again later."}</p>`;
+                    });
+            });
+
+
+        </script>
+
+
+        <!-- Contact Section End -->
+
     </main>
 
     <footer class="footer">
