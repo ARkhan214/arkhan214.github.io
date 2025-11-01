@@ -10,26 +10,66 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #D2D2D2;
+            background-image:
+                repeating-linear-gradient(to right, transparent 0 100px,
+                    #25283b22 100px 101px),
+                repeating-linear-gradient(to bottom, transparent 0 100px,
+                    #25283b22 100px 101px);
+        }
+
+        /* body::before {
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(photo/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        } */
+
+        #home.hero {
+            position: relative;
+            /* overlay বা pseudo-element-এর জন্য দরকার */
+            background-image: url('photo/bg.png');
+            background-size: cover;
+            /* পুরো section ঢাকা দেবে */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="logo">Rahim Khan</a>
+            <a href="#" class="logo">MD Rahim Khan</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#fun-facts">Fun Facts</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle">
@@ -41,207 +81,393 @@
     </header>
 
     <main>
-        <section id="home" class="hero section">
-            <div class="hero-content">
-                <p>Hello, I'm</p>
-                <h1>Md. Rahim Khan</h1>
-                <h2>A <span class="typing">Full Stack Developer</span></h2>
-                <p class="tagline">Expert in designing, developing, and deploying scalable web applications.</p>
-                <a href="#contact" class="btn primary-btn">Get In Touch</a>
-                <a href="#portfolio" class="btn secondary-btn">View Projects</a>
-            </div>
-            <div class="hero-image">
-                <img src="./photo/Md Rahim Khan.jpg" alt="Md. Rahim Khan Profile Picture">
+
+
+        <section id="home" class="hero">
+            <div class="banner">
+                <div class="slider" style="--quantity: 13">
+                    <div class="item" style="--position: 1"><img src="photo/animi1.jpg" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="photo/plan1.jpg" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="photo/programming2.jpg" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="photo/robot_1.jpg" alt=""></div>
+                    <div class="item" style="--position: 5"><img src="photo/programming3.jpg" alt=""></div>
+                    <div class="item" style="--position: 6"><img src="photo/animi2.jpg" alt=""></div>
+                    <div class="item" style="--position: 7"><img src="photo/plan2.jpg" alt=""></div>
+                    <div class="item" style="--position: 8"><img src="photo/robot_2.jpg" alt=""></div>
+                    <div class="item" style="--position: 9"><img src="photo/programm1.jpg" alt=""></div>
+                    <div class="item" style="--position: 10"><img src="photo/programming4.jpg" alt=""></div>
+                    <div class="item" style="--position: 11"><img src="photo/robot_3.jpg" alt=""></div>
+                    <div class="item" style="--position: 12"><img src="photo/programming5.jpg" alt=""></div>
+                    <div class="item" style="--position: 13"><img src="photo/robinhood-removebg-preview.png" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- <h1 data-content="CSS ONLY">
+                        CSS ONLY
+                    </h1> -->
+                    <div class="author">
+                        <h2>MD Rahim Khan</h2>
+                        <p><b>Full Stack Web & Mobile App Devloper</b></p>
+                    </div>
+                    <div class="model"></div>
+                </div>
             </div>
         </section>
+
+
+
+
 
         <section id="about" class="about section bg-light">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>My name is **Md. Rahim Khan**. I am an experienced **Full Stack Developer** with 5+ years of hands-on
-                    experience creating efficient and scalable solutions using modern web technologies. My expertise
-                    lies in the **MERN/MEAN Stack**, where I focus not only on robust coding but also on excellent user
+                <p>Hi! This is Md. Rahim Khan. I am an experienced Full Stack Developer. with 1 year of hands-on
+                    experience creating efficient and scalable solutions using modern web technologies.Where I focus not
+                    only on robust coding but also on excellent user
                     experience (UX) and application performance.</p>
                 <div class="about-details">
                     <p><strong>Name:</strong> Md. Rahim Khan</p>
                     <p><strong>Profession:</strong> Full Stack Developer</p>
-                    <p><strong>Email:</strong> your.email@example.com</p>
-                    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+                    <p><strong>Email:</strong> abdurrahimkhan214dc@gmail.com</p>
+                    <p><strong>Location:</strong>6 & 25 South Banasree,Khilgaon,Dhaka, Bangladesh</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Front-End</h3>
-                    <ul>
-                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                        <li>React.js, Next.js, Redux</li>
-                        <li>Tailwind CSS, Bootstrap</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Back-End</h3>
-                    <ul>
-                        <li>Node.js, Express.js</li>
-                        <li>Python (Django, Flask)</li>
-                        <li>PHP (Laravel)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Database & DevOps</h3>
-                    <ul>
-                        <li>MongoDB, PostgreSQL, MySQL</li>
-                        <li>Git, GitHub, CI/CD</li>
-                        <li>AWS, Docker</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio section bg-light">
-            <h2 class="section-title">Portfolio (Recent Projects)</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>E-commerce Platform</h3>
-                    <p>A fully functional e-commerce solution built with React, Node.js, and MongoDB.</p>
-                    <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Real-Time Chat App</h3>
-                    <p>A fast messaging application using the MERN stack with Socket.io for real-time communication.</p>
-                    <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Task Management Tool</h3>
-                    <p>Modern project management dashboard designed with Next.js and PostgreSQL.</p>
-                    <a href="#" target="_blank">Live Demo</a> | <a href="#" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="experience section">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Senior Full Stack Developer</h3>
-                    <p><strong>Tech Solutions Ltd.</strong> | January 2021 - Present</p>
-                    <ul>
-                        <li>Led the architecture and development of 10+ web applications.</li>
-                        <li>Mentored team members in new technologies and conducted code reviews.</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h3>Junior Developer</h3>
-                    <p><strong>Web Innovations</strong> | June 2019 - December 2020</p>
-                    <ul>
-                        <li>Assisted in building out front-end and back-end features.</li>
-                        <li>Managed code base maintenance and bug fixing tasks.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="education section bg-light">
-            <h2 class="section-title">Education</h2>
-            <div class="education-details">
-                <div class="edu-item">
-                    <h3>B.Sc. in Computer Science and Engineering (CSE)</h3>
-                    <p>University of Dhaka | 2017 - 2021</p>
-                    <p>CGPA: 3.85/4.00</p>
-                </div>
-                <div class="edu-item">
-                    <h3>Higher Secondary Certificate (HSC)</h3>
-                    <p>Rajshahi College | 2015</p>
-                    <p>Group: Science</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services section">
-            <h2 class="section-title">What I Offer</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Custom Web Development</h3>
-                    <p>Building tailored front-end and back-end web solutions from scratch.</p>
-                </div>
-                <div class="service-card">
-                    <h3>API Integration</h3>
-                    <p>Designing and implementing secure and powerful RESTful APIs.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cloud Deployment</h3>
-                    <p>Setting up and maintaining applications on AWS, Vercel, or Heroku.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials section bg-light">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <p>"Rahim is an extremely dedicated and proficient developer. His code quality is always top-notch
-                        and reliable."</p>
-                    <h4>- Mr. Karim Ahmed, CEO, XYZ Corporation</h4>
-                </div>
-                <div class="testimonial-card">
-                    <p>"He ensured excellent performance and delivered the project well within the tight deadline.
-                        Highly recommend."</p>
-                    <h4>- Ms. Farzana Begum, Project Manager</h4>
-                </div>
-            </div>
-        </section>
-
-        <section id="awards" class="awards section">
-            <h2 class="section-title">Awards & Achievements</h2>
-            <ul>
-                <li><strong>Best Developer of the Year 2024</strong> (Tech Solutions Ltd.)</li>
-                <li><strong>Community Contributor Award</strong> (Recognized on GitHub for open-source contributions)
-                </li>
-                <li><strong>10+ Successful Project Deployments</strong> (Showcased in the portfolio)</li>
-            </ul>
-        </section>
-
-        <section id="blog" class="blog section bg-light">
-            <h2 class="section-title">Recent Blog Posts</h2>
-            <div class="blog-grid">
-                <article class="blog-post">
-                    <h3>State Management using React Hooks</h3>
-                    <p>October 20, 2024</p>
-                    <a href="#">Read More</a>
-                </article>
-                <article class="blog-post">
-                    <h3>Microservices with Node.js in 2025</h3>
-                    <p>September 05, 2024</p>
-                    <a href="#">Read More</a>
-                </article>
             </div>
         </section>
 
         <section id="resume" class="cta section">
-            <h2 class="section-title">Have a Project in Mind?</h2>
-            <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to life.
-            </p>
-            <a href="cv/cv.pdf" download class="btn primary-btn">Download Resume</a>
+            <div class="cta-container">
+                <h2 class="section-title">Have a Project in Mind?</h2>
+                <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to
+                    life.</p>
+                <a href="cv/cv.pdf" download class="btn primary-btn">Download Resume</a>
+            </div>
         </section>
 
-        <section id="fun-facts" class="fun-facts section">
-            <h2 class="section-title">Fun Facts About Me</h2>
-            <div class="fact-grid">
-                <div class="fact-card">
-                    <h3>4500+</h3>
-                    <p>Cups of coffee consumed (meeting deadlines)</p>
+
+        <section id="skills" class="skills section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+
+                <!-- Frontend & Mobile -->
+                <div class="skill-category">
+                    <h3>Front-End & Mobile</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <img src="https://tinyurl.com/4d6fhyjc" alt="Angular" width="30">
+                            Angular
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+                                alt="TypeScript" width="30">
+                            TypeScript
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Android_robot.svg"
+                                alt="Android" width="30">
+                            Android
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png"
+                                alt="Flutter" width="30">
+                            Flutter
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png" alt="Dart"
+                                width="30">
+                            Dart
+                        </li>
+                    </ul>
                 </div>
-                <div class="fact-card">
-                    <h3>100%</h3>
-                    <p>Code coverage is my goal</p>
+
+                <!-- Backend & API -->
+                <div class="skill-category">
+                    <h3>Backend & API Tools</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <img src="https://tinyurl.com/39y6643e" alt="Java" width="30">
+                            Java
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                alt="Node.js" width="30">
+                            Node.js
+                        </li>
+                        <li>
+                            <img src="https://tinyurl.com/2uukmu9u" alt="Spring Boot" width="30">
+                            Spring Boot
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Postman_logo.svg"
+                                alt="Postman" width="30">
+                            Postman
+                        </li>
+
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/JavaServer_Pages_logo.svg"
+                                alt="JSP" width="30">
+                            JSP
+                        </li>
+                        <li>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Java_Swing_logo.png"
+                                alt="Swing" width="30">
+                            Swing
+                        </li>
+                    </ul>
                 </div>
-                <div class="fact-card">
-                    <h3>Hobby</h3>
-                    <p>Playing football and reading books</p>
+
+                <!-- Design & Office Tools -->
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <img src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_28dp.png"
+                                alt="Firebase" width="30">
+                            Firebase
+                        </li>
+                        <li>
+                            <img src="https://tinyurl.com/3y8b2ukw" alt="Firebase" width="30">
+                            MySQL
+                        </li>
+                    </ul>
                 </div>
+
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="portfolio section bg-light">
+            <h2 class="section-title">Portfolio (Recent Projects)</h2>
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>MK Bank Project 1</h3>
+                    <p>A fully functional banking application built with <strong>Spring Boot</strong> for backend and
+                        <strong>Angular</strong> for frontend. Features include account management, transaction history,
+                        and online banking operations.
+                    </p>
+                    <a href="https://github.com/ARkhan214/My-Projects/tree/main/Screenshots/Angular(Web)"
+                        target="_blank">Project Screenshots</a> | <a href="https://github.com/ARkhan214/My-Projects"
+                        target="_blank">GitHub</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>MK Bank Project 2</h3>
+                    <p>A fully functional banking application built with <strong>Spring Boot</strong> for backend and
+                        <strong>Flutter</strong> for frontend. Features include account management, transaction history,
+                        and online banking operations.
+                    </p>
+                    <a href="https://github.com/ARkhan214/My-Projects/tree/main/Screenshots/Flutter(Mobile)"
+                        target="_blank">Project Screenshots</a> | <a href="https://github.com/ARkhan214/My-Projects"
+                        target="_blank">GitHub</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>MK Bank Project 3</h3>
+                    <p>A fully functional banking application built with <strong>Node js</strong> for backend and
+                        <strong>Angular</strong> for frontend. Features include account management, transaction history,
+                        and online banking operations.
+                    </p>
+                    <a href="https://github.com/ARkhan214/My-Projects/tree/main/Node.js%20and%20Angular/Screenshots"
+                        target="_blank">Project Screenshots</a> | <a href="https://github.com/ARkhan214/My-Projects"
+                        target="_blank">GitHub</a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="experience" class="experience section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <h3>Full Stack Developer - MK Bank Projects</h3>
+                    <ul>
+                        <li>Developed three comprehensive banking applications using <strong>Spring Boot, Angular,
+                                Flutter, and Node.js</strong>.</li>
+                        <li>Handled both frontend and backend development, ensuring smooth integration between
+                            Angular/Flutter frontends and Spring Boot/Node.js backends.</li>
+                        <li>Implemented account management, transaction history, and online banking operations features.
+                        </li>
+                        <li>Worked with databases, APIs, and authentication systems to ensure secure and scalable
+                            applications.</li>
+                        <li>Maintained project codebases on GitHub and created detailed project documentation and
+                            screenshots for reference.</li>
+                    </ul>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/ARkhan214/My-Projects"
+                            target="_blank">https://github.com/ARkhan214/My-Projects</a></p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="education" class="education section bg-light">
+            <h2 class="section-title">Education & Professional Training</h2>
+            <div class="education-details">
+
+                <!-- Professional Training -->
+                <div class="edu-item">
+                    <h3>PROFESSIONAL TRAINING</h3>
+                    <p><strong>IsDB-BISEW IT Scholarship Programme</strong></p>
+                    <p>Web and Mobile App Development using <strong>Spring Boot, Android & Flutter (JEE)</strong></p>
+                    <p>Duration: Jan 2025 - Oct 2025 | Total Course Hours: 788</p>
+                </div>
+
+                <!-- Education -->
+                <div class="edu-item">
+                    <h3>MA in History</h3>
+                    <p><strong>Dhaka College</strong> | Session: 2022 - 2023 | Passing Year: 2025</p>
+                    <p>CGPA: 2.92 / 4.0</p>
+                </div>
+
+                <div class="edu-item">
+                    <h3>BA in History</h3>
+                    <p><strong>Dhaka College</strong> | Session: 2018 - 2019 | Passing Year: 2024</p>
+                    <p>CGPA: 2.76 / 4.0</p>
+                </div>
+
+                <div class="edu-item">
+                    <h3>HSC (Humanities)</h3>
+                    <p><strong>Government Bangabandhu College</strong> | Session: 2016 - 2018 | Passing Year: 2018</p>
+                    <p>GPA: 3.00 / 5.0</p>
+                </div>
+
+                <div class="edu-item">
+                    <h3>SSC (Humanities)</h3>
+                    <p><strong>K.K.T Haji N C Institution</strong> | Passing Year: 2016</p>
+                    <p>GPA: 3.39 / 5.0</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services" class="services section bg-light">
+            <h2 class="section-title">What I Offer</h2>
+            <div class="service-grid">
+
+                <!-- Web & Mobile Development -->
+                <div class="service-card">
+                    <h3>Full Stack Web Development</h3>
+                    <p>Designing and developing responsive, secure, and scalable web applications using <strong>Angular,
+                            Spring Boot, Node.js, TypeScript, Java, JSP, and Swing</strong>. I focus on robust backend
+                        architecture and smooth frontend UI/UX.</p>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="service-card">
+                    <h3>Mobile App Development</h3>
+                    <p>Building cross-platform mobile apps with <strong>Flutter & Dart</strong> and native Android
+                        applications, integrating with backend APIs for seamless user experience.</p>
+                </div>
+
+                <!-- API & Database -->
+                <div class="service-card">
+                    <h3>API & Database Management</h3>
+                    <p>Creating secure and efficient RESTful APIs using <strong>Node.js, Spring Boot</strong> and
+                        managing databases such as <strong>Firebase, MongoDB, PostgreSQL</strong>. Ensuring data
+                        integrity and high performance.</p>
+                </div>
+
+                <!-- UI/UX & Web Design -->
+                <div class="service-card">
+                    <h3>Web & UI/UX Design</h3>
+                    <p>Crafting modern, user-friendly designs with <strong>HTML5, CSS3, JavaScript, Tailwind CSS,
+                            Bootstrap</strong>. Focused on responsive, accessible, and visually appealing interfaces.
+                    </p>
+                </div>
+
+                <!-- Cloud & Deployment -->
+                <div class="service-card">
+                    <h3>Cloud Deployment & Hosting</h3>
+                    <p>Deploying and maintaining web and mobile applications on cloud platforms like <strong>AWS,
+                            Firebase, Vercel, and Heroku</strong>, ensuring uptime, scalability, and security.</p>
+                </div>
+
+                <!-- Tools & Productivity -->
+                <div class="service-card">
+                    <h3>Development Tools & Collaboration</h3>
+                    <p>Proficient in <strong>Postman, Git, GitHub, MS Office</strong> for testing, version control, and
+                        project documentation. Collaborating effectively in team environments.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="awards" class="awards section bg-light">
+            <h2 class="section-title">Awards & Achievements</h2>
+            <ul>
+                <li>
+                    <strong>IsDB-BISEW IT Scholarship Programme Completion</strong>
+                    (Web & Mobile App Development using Spring Boot, Android & Flutter – Jan 2025 to Oct 2025, 788
+                    hours)
+                    <br>
+                    <img src="achievements/jee-64.jpg" alt="IsDB-BISEW Certificate"
+                        style="width:200px; margin-top:10px;">
+                </li>
+                <li>
+                    <strong>MA in History Completion</strong> (Dhaka College, 2025, CGPA: 2.92/4.0)
+                    <br>
+                    <img src="path-to-your-certificate2.jpg" alt="MA Certificate" style="width:200px; margin-top:10px;">
+                </li>
+                <li>
+                    <strong>BA in History Completion</strong> (Dhaka College, 2024, CGPA: 2.76/4.0)
+                    <br>
+                    <img src="path-to-your-certificate3.jpg" alt="BA Certificate" style="width:200px; margin-top:10px;">
+                </li>
+                <li>
+                    <strong>HSC (Humanities)</strong> (Government Bangabandhu College, 2018, GPA: 3.00/5.0)
+                    <br>
+                    <img src="path-to-your-certificate4.jpg" alt="HSC Certificate"
+                        style="width:200px; margin-top:10px;">
+                </li>
+                <li>
+                    <strong>SSC (Humanities)</strong> (K.K.T Haji N C Institution, 2016, GPA: 3.39/5.0)
+                    <br>
+                    <img src="path-to-your-certificate5.jpg" alt="SSC Certificate"
+                        style="width:200px; margin-top:10px;">
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="blog" class="blog section bg-light">
+            <h2 class="section-title">Recent Projects & Websites</h2>
+            <div class="blog-grid">
+
+                <!-- Last Project -->
+                <article class="blog-post">
+                    <h3>MK Bank Project 3 (Node.js & Angular)</h3>
+                    <p>Completed: 2025</p>
+                    <img src="photo/1_home_page.png" alt="MK Bank Project 3 Screenshot"
+                        style="width:100%; margin-top:10px;">
+                    <p>
+                        A fully functional banking application built with <strong>Node.js</strong> backend and
+                        <strong>Angular</strong> frontend.
+                        Features include account management, transaction history, and online banking operations.
+                    </p>
+                    <a href="https://github.com/ARkhan214/My-Projects/tree/main/Node.js%20and%20Angular"
+                        target="_blank">View on GitHub</a>
+                </article>
+
+                <!-- Last Website -->
+                <article class="blog-post">
+                    <h3>3D Slider Website</h3>
+                    <p>Completed: 2025</p>
+                    <img src="photo/3d_project.png" alt="3D Slider Website Screenshot"
+                        style="width:100%; margin-top:10px;">
+                    <p>
+                        Interactive 3D slider website showcasing modern web animation and design techniques using HTML,
+                        CSS, and JavaScript.
+                    </p>
+                    <a href="https://arkhan214.github.io/3d-slider/" target="_blank">Visit Website</a>
+                </article>
+
             </div>
         </section>
 
@@ -258,9 +484,9 @@
                 <p id="form-message" class="message-text"></p>
             </form>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+                <a href="https://github.com/ARkhan214" target="_blank">GitHub</a> |
                 <a href="https://www.linkedin.com/in/md-rahim-khan-452778377/" target="_blank">LinkedIn</a> |
-                <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+                <a href="https://www.facebook.com/share/19jwnyCSNf/" target="_blank">Facebook</a>
             </div>
         </section>
 
