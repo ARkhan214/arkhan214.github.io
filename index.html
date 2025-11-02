@@ -11,44 +11,32 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            background-color: #D2D2D2;
-            background-image:
-                repeating-linear-gradient(to right, transparent 0 100px,
-                    #25283b22 100px 101px),
-                repeating-linear-gradient(to bottom, transparent 0 100px,
-                    #25283b22 100px 101px);
-        }
-
-        /* body::before {
-            position: absolute;
-            width: min(1400px, 90vw);
-            top: 10%;
-            left: 50%;
-            height: 90%;
-            transform: translateX(-50%);
-            content: '';
-            background-image: url(photo/bg.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            pointer-events: none;
-        } */
-
-        #home.hero {
+    /* Full Background Image settings */
+    html, body {
+        /* margin-top: 60px; */
+        height: 100%; /* Ensure body stretches to full viewport height */
+    }
+    
+    body {
+        background-color: #D2D2D2;
+        background-image: url('photo/bg_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; /* This makes the image cover the whole screen */
+        background-attachment: fixed; /* This keeps the image static while content scrolls */
+        background-position: center center;
+    }
+        /* #home.hero {
             position: relative;
-            background-image: url('photo/bg.png');
+            background-image: url('photo/bg_1.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-        }
-
-
+        } */
     </style>
 
 </head>
@@ -77,38 +65,37 @@
                 <span></span>
             </div>
         </nav>
-    </h
-
-
+        </header>
+        <main>
         <section id="home" class="hero">
-            <div class="banner">
-                <div class="slider" style="--quantity: 13">
-                    <div class="item" style="--position: 1"><img src="photo/animi1.jpg" alt=""></div>
-                    <div class="item" style="--position: 2"><img src="photo/plan1.jpg" alt=""></div>
-                    <div class="item" style="--position: 3"><img src="photo/programming2.jpg" alt=""></div>
-                    <div class="item" style="--position: 4"><img src="photo/robot_1.jpg" alt=""></div>
-                    <div class="item" style="--position: 5"><img src="photo/programming3.jpg" alt=""></div>
-                    <div class="item" style="--position: 6"><img src="photo/animi2.jpg" alt=""></div>
-                    <div class="item" style="--position: 7"><img src="photo/plan2.jpg" alt=""></div>
-                    <div class="item" style="--position: 8"><img src="photo/robot_2.jpg" alt=""></div>
-                    <div class="item" style="--position: 9"><img src="photo/programm1.jpg" alt=""></div>
-                    <div class="item" style="--position: 10"><img src="photo/programming4.jpg" alt=""></div>
-                    <div class="item" style="--position: 11"><img src="photo/robot_3.jpg" alt=""></div>
-                    <div class="item" style="--position: 12"><img src="photo/programming5.jpg" alt=""></div>
-                    <div class="item" style="--position: 13"><img src="photo/robinhood-removebg-preview.png" alt="">
-                    </div>
-                </div>
-                <div class="content">
-                    <!-- <h1 data-content="CSS ONLY">
-                        CSS ONLY
-                    </h1> -->
-                    <div class="author">
-                        <h2>MD Rahim Khan</h2>
-                        <p><b>Full Stack Web & Mobile App Devloper</b></p>
-                    </div>
-                    <div class="model"></div>
+        <div class="banner">
+            <div class="slider" style="--quantity: 13">
+                <div class="item" style="--position: 1"><img src="photo/animi1.jpg" alt=""></div>
+                <div class="item" style="--position: 2"><img src="photo/plan1.jpg" alt=""></div>
+                <div class="item" style="--position: 3"><img src="photo/programming2.jpg" alt=""></div>
+                <div class="item" style="--position: 4"><img src="photo/robot_1.jpg" alt=""></div>
+                <div class="item" style="--position: 5"><img src="photo/programming3.jpg" alt=""></div>
+                <div class="item" style="--position: 6"><img src="photo/animi2.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="photo/plan2.jpg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="photo/robot_2.jpg" alt=""></div>
+                <div class="item" style="--position: 9"><img src="photo/programm1.jpg" alt=""></div>
+                <div class="item" style="--position: 10"><img src="photo/programming4.jpg" alt=""></div>
+                <div class="item" style="--position: 11"><img src="photo/robot_3.jpg" alt=""></div>
+                <div class="item" style="--position: 12"><img src="photo/programming5.jpg" alt=""></div>
+                <div class="item" style="--position: 13"><img src="photo/robot_4.jpg" alt="">
                 </div>
             </div>
+            <div class="content">
+                <!-- <h1 data-content="CSS ONLY">
+                        CSS ONLY
+                    </h1> -->
+                <div class="author">
+                    <h2>MD Rahim Khan</h2>
+                    <p><b>Full Stack Web & Mobile App Devloper</b></p>
+                </div>
+                <div class="model"></div>
+            </div>
+        </div>
         </section>
 
 
@@ -238,7 +225,8 @@
 
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <h3>MK Bank Project 1</h3>
+                    <h3>MK Bank Project</h3>
+                    <p><img src="photo/Spring_boot_and_angular_projects.png"></p>
                     <p>A fully functional banking application built with <strong>Spring Boot</strong> for backend and
                         <strong>Angular</strong> for frontend. Features include account management, transaction history,
                         and online banking operations.
@@ -250,7 +238,8 @@
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <h3>MK Bank Project 2</h3>
+                    <h3>MK Bank Project</h3>
+                    <p><img src="photo/Flutter_project.png"></p>
                     <p>A fully functional banking application built with <strong>Spring Boot</strong> for backend and
                         <strong>Flutter</strong> for frontend. Features include account management, transaction history,
                         and online banking operations.
@@ -262,7 +251,8 @@
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <h3>MK Bank Project 3</h3>
+                    <h3>MK Courier Service Project</h3>
+                    <p><img src="photo/1_home_page.png"></p>
                     <p>A fully functional banking application built with <strong>Node js</strong> for backend and
                         <strong>Angular</strong> for frontend. Features include account management, transaction history,
                         and online banking operations.
@@ -519,15 +509,15 @@
 
         <!-- Contact Section End -->
 
-    </main>
+        </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Md. Rahim Khan. All rights reserved.</p>
-    </footer>
+        <footer class="footer">
+            <p>&copy; 2025 Md. Rahim Khan. All rights reserved.</p>
+        </footer>
 
-    <script src="script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+        <script src="script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
 </body>
 
 </html>

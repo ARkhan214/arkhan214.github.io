@@ -59,5 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         type();
     }
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    } else {
+        header.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+    }
+});
 
 });
