@@ -949,6 +949,22 @@ h3 {
     font-weight: 500;
 }
 
+
+.highlight-link {
+    background-color: yellow;
+    color: black;   
+    padding: 5px 10px;
+    border-radius: 5px;      
+    text-decoration: none;    
+    font-weight: bold;       
+    transition: background-color 0.3s;
+}
+
+.highlight-link:hover {
+    background-color: orange;
+    color: white;
+}
+
 /* Contact Section Start ==================================*/
 
 .contact {
