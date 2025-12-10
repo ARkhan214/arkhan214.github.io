@@ -451,8 +451,76 @@ h3 {
     box-shadow: 0 8px 20px rgba(255, 75, 43, 0.6);
     transform: translateY(-3px);
 }
+/* == */
+.resume-inside-about {
+    text-align: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 4rem 5%;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-/* Resume Section End */
+.resume-inside-about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: beige;
+}
+
+.resume-inside-about p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* hire me === */
+/* Available for Work Badge */
+.available-badge {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #28a745, #85e085);
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.available-badge:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+}
+
+/* Hire Me Button */
+.hire-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(45deg, #007bff, #00c0ff);
+    border-radius: 35px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.6);
+    background: linear-gradient(45deg, #00c0ff, #007bff);
+}
+
+
+/* Resume Section End ===========================*/
 
 
 
@@ -788,6 +856,18 @@ h3 {
 
 .service-card:hover h3 {
     color: var(--white);
+}
+
+.hire-btn {
+    padding: 10px 22px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover .hire-btn {
+    background-color: #fff;
+    color: #203a43;
 }
 
 

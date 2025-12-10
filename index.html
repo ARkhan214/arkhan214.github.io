@@ -10,39 +10,31 @@
 
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        /* Full Background Image settings */
-        html,
-        body {
-            /* margin-top: 60px; */
-            height: 100%;
-            /* Ensure body stretches to full viewport height */
-        }
+    html,
+    body {
+        height: 100%;
+    }
 
-        body {
-            background-color: #D2D2D2;
-            background-image: url('photo/bg_1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            /* This makes the image cover the whole screen */
-            background-attachment: fixed;
-            /* This keeps the image static while content scrolls */
-            background-position: center center;
-        }
+    body {
+        background-color: #D2D2D2;
+        background-image: url('photo/bg_1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
 
-        /* #home.hero {
-            position: relative;
-            background-image: url('photo/bg_1.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        } */
-    </style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
 
 </head>
 
@@ -54,7 +46,6 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -108,35 +99,43 @@
 
 
         <section id="about" class="about section bg-light">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>Hi! This is Md. Rahim Khan. I am an experienced Full Stack Developer. with 1 year of hands-on
-                    experience creating efficient and scalable solutions using modern web technologies.Where I focus not
-                    only on robust coding but also on excellent user
-                    experience (UX) and application performance.</p>
-                <div class="about-details">
-                    <p><strong>Name:</strong> Md. Rahim Khan</p>
-                    <p><strong>Profession:</strong> Full Stack Developer</p>
-                    <p><strong>Email:</strong> abdurrahimkhan214dc@gmail.com</p>
-                    <!-- <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/md-rahim-khan214/</p> -->
-                    <p><strong>LinkedIn:</strong><br>
-                        <a href="https://www.linkedin.com/in/md-rahim-khan214/" target="_blank">
-                            https://www.linkedin.com/in/md-rahim-khan214/
-                        </a>
-                    </p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+        <p>
+            Hi! This is Md. Rahim Khan. I am an experienced Full Stack Developer with 1 year of hands-on
+            experience creating efficient and scalable solutions using modern web technologies.
+            I focus not only on robust coding but also on excellent user experience (UX) and application performance.
+        </p>
 
-                </div>
-            </div>
-        </section>
+        <div class="about-details">
+            <p><strong>Name:</strong> Md. Rahim Khan</p>
+            <p><strong>Profession:</strong> Full Stack Developer</p>
+            <p><strong>Email:</strong> abdurrahimkhan214dc@gmail.com</p>
 
-        <section id="resume" class="cta section">
-            <div class="cta-container">
-                <h2 class="section-title">Have a Project in Mind?</h2>
-                <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to
-                    life.</p>
-                <a href="cv/Md_Rahim_Khan_Resume.pdf" download class="btn primary-btn">Download Resume</a>
-            </div>
-        </section>
+            <p>
+                <strong>LinkedIn:</strong><br>
+                <a href="https://www.linkedin.com/in/md-rahim-khan214/" target="_blank">
+                    https://www.linkedin.com/in/md-rahim-khan214/
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Resume CTA INSIDE About Section -->
+    <div class="resume-inside-about">
+        <h2 class="section-title">Have a Project in Mind?        <!-- Hire Me Button -->
+    <a href="#contact" class="btn btn-success hire-btn">Hire Me</a></h2>
+            <!-- Available for Work -->
+    <span class="available-badge">✔ Available for Work</span>
+
+
+
+        <p>Download my full CV to review my qualifications and let's discuss how I can bring your project to life.</p>
+        <a href="cv/Md_Rahim_Khan_Resume.pdf" download class="btn primary-btn">Download Resume</a>
+    </div>
+
+</section>
+
 
 
         <section id="skills" class="skills section">
@@ -350,6 +349,9 @@
                     <p>Designing and developing responsive, secure, and scalable web applications using <strong>Angular,
                             Spring Boot, Node.js, TypeScript, Java, JSP, and Swing</strong>. I focus on robust backend
                         architecture and smooth frontend UI/UX.</p>
+
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
                 <!-- Mobile App Development -->
@@ -357,6 +359,8 @@
                     <h3>Mobile App Development</h3>
                     <p>Building cross-platform mobile apps with <strong>Flutter & Dart</strong> and native Android
                         applications, integrating with backend APIs for seamless user experience.</p>
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
                 <!-- API & Database -->
@@ -365,6 +369,8 @@
                     <p>Creating secure and efficient RESTful APIs using <strong>Node.js, Spring Boot</strong> and
                         managing databases such as <strong>Firebase, MongoDB, PostgreSQL</strong>. Ensuring data
                         integrity and high performance.</p>
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
                 <!-- UI/UX & Web Design -->
@@ -373,6 +379,8 @@
                     <p>Crafting modern, user-friendly designs with <strong>HTML5, CSS3, JavaScript, Tailwind CSS,
                             Bootstrap</strong>. Focused on responsive, accessible, and visually appealing interfaces.
                     </p>
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
                 <!-- Cloud & Deployment -->
@@ -380,6 +388,8 @@
                     <h3>Cloud Deployment & Hosting</h3>
                     <p>Deploying and maintaining web and mobile applications on cloud platforms like <strong>AWS,
                             Firebase, Vercel, and Heroku</strong>, ensuring uptime, scalability, and security.</p>
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
                 <!-- Tools & Productivity -->
@@ -387,6 +397,8 @@
                     <h3>Development Tools & Collaboration</h3>
                     <p>Proficient in <strong>Postman, Git, GitHub, MS Office</strong> for testing, version control, and
                         project documentation. Collaborating effectively in team environments.</p>
+                    <!-- Hire Me Button -->
+                    <a href="#contact" class="btn btn-success hire-btn mt-3">Hire Me</a>
                 </div>
 
             </div>
@@ -401,8 +413,8 @@
                     (Web & Mobile App Development using Spring Boot, Android & Flutter – Jan 2025 to Oct 2025, 788
                     hours)
                     <br>
-                    <img src="certificate_achivement/isdb-bsew-web-&-mobole-app-development.jpg" alt="IsDB-BISEW Certificate"
-                        style="width:300px; margin-top:10px;">
+                    <img src="certificate_achivement/isdb-bsew-web-&-mobole-app-development.jpg"
+                        alt="IsDB-BISEW Certificate" style="width:300px; margin-top:10px;">
                 </li>
             </ul>
         </section>
