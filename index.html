@@ -476,7 +476,6 @@
         </section>
 
         <!-- Contact Section start -->
-
         <section id="contact" class="contact section bg-light">
             <h2 class="section-title">Contact Me</h2>
             <form id="contact-form" class="contact-form">
@@ -487,20 +486,64 @@
                 <button type="submit" class="btn primary-btn">Send Message</button>
                 <p id="form-message" class="message-text"></p>
             </form>
-            <div class="social-links">
-                <a href="https://github.com/ARkhan214" target="_blank">GitHub</a> |
-                <a href="https://www.linkedin.com/in/md-rahim-khan-452778377/" target="_blank">LinkedIn</a> |
-                <a href="https://www.facebook.com/share/19jwnyCSNf/" target="_blank">Facebook</a>
-            </div>
         </section>
 
-
+        <!-- EmailJS v4 CDN -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+        <script>
+            emailjs.init({
+                publicKey: "gmvIhNEZd7w5-PxOB"
+            });
+
+            const form = document.getElementById("contact-form");
+            const msg = document.getElementById("form-message");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                emailjs.send("service_xtib79s", "template_0o18lij", {
+                    subject: form.subject.value,
+                    name: form.name.value,
+                    email: form.email.value,
+                    message: form.message.value
+                })
+                    .then(() => {
+                        msg.textContent = "Message sent successfully!";
+                        msg.style.color = "green";
+                        form.reset();
+                    })
+                    .catch((error) => {
+                        msg.textContent = "Failed to send!";
+                        msg.style.color = "red";
+                        console.log("FAILED...", error);
+                    });
+            });
+        </script>
+
+
+
+        <!-- 
+        <section id="contact" class="contact section bg-light">
+            <h2 class="section-title">Contact Me</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+                <p id="form-message" class="message-text"></p>
+            </form>
+        </section>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script type="text/javascript">
             (function () {
-                emailjs.init({
-                    publicKey: "Z_5G4x1ZCxTiOHA4K",
-                });
+                // emailjs.init({
+                //     publicKey: "gmvIhNEZd7w5-PxOB",
+                // });
+
+                emailjs.init("gmvIhNEZd7w5-PxOB");
             })();
 
             document.getElementById("contact-form").addEventListener("submit", function (event) {
@@ -509,7 +552,7 @@
                 const statusDiv = document.getElementById("form-message");
                 statusDiv.innerHTML = "<p style='color:#ffc107;'>⏳ Sending message...</p>";
 
-                // ✅ Using your actual Service ID and Template ID
+                // Using your actual Service ID and Template ID
                 emailjs.sendForm("service_xtib79s", "template_0o18lij", this)
                     .then(() => {
                         statusDiv.innerHTML = "<p style='color:#28a745;'>✅ Message sent successfully! Check your Gmail inbox.</p>";
@@ -520,10 +563,26 @@
                     });
             });
 
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault();
 
-        </script>
+                const statusDiv = document.getElementById("form-message");
+                statusDiv.innerHTML = "<p style='color:#ffc107;'>⏳ Sending message...</p>";
+
+                emailjs.sendForm("service_xtib79s", "template_0o18lij", this)
+                    .then(() => {
+                        statusDiv.innerHTML = "<p style='color:#28a745;'>✅ Message sent successfully!</p>";
+                        this.reset();
+                    })
+                    .catch((error) => {
+                        console.error("❌ EmailJS Error:", error);
+                        let msg = error?.text || error?.statusText || "Please try again later.";
+                        statusDiv.innerHTML = `<p style='color:#dc3545;'>❌ Failed: ${msg}</p>`;
+                    });
+            });
 
 
+        </script> -->
         <!-- Contact Section End -->
 
     </main>

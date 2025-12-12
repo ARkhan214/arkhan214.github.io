@@ -143,16 +143,14 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(0,0,0,0.3); transparency overlay */
     pointer-events: none;
 }
 
-
 .banner {
-    /* navbar er niche theke banner ghurar jonno */
     margin-top: 80px;
     width: 100%;
-    height: 100vh;
+    height: auto;              /* FIX-1 */
+    min-height: 100vh;         /* FIX-2 */
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -174,13 +172,11 @@ h3 {
     from {
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }
-
     to {
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
 }
 
-/* if somene point their coursor on bannar image the banner will be stop  */
 .banner .slider:hover {
     animation-play-state: paused;
 }
@@ -188,8 +184,7 @@ h3 {
 .banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
 
 .banner .slider .item img {
@@ -231,7 +226,6 @@ h3 {
 }
 
 .banner .content .author {
-    /* Full Stack Web & Mobile App Devloper likha */
     font-family: Poppins;
     text-align: right;
     color: antiquewhite;
@@ -239,11 +233,13 @@ h3 {
 }
 
 .banner .content h2 {
-    /* Md Rahim Khan likha */
     font-size: 3em;
     color: beige;
 }
 
+/* ----------------------------
+      MODEL RESPONSIVE FIX
+-------------------------------*/
 .banner .content .model {
     background-image: url(photo/me.png);
     width: 100%;
@@ -260,14 +256,20 @@ h3 {
 
 .banner .content .model:hover {
     transform: scale(1.05) translateY(-10px);
-    filter: brightness(1.1);
-    /* Increase contrast by 20% and brightness by 20% */
-    filter: contrast(1.2) brightness(1.2);
-    /* eta diea shado dewa hocce */
     filter: contrast(1.2) brightness(1.2) drop-shadow(0 5px 10px rgba(255, 255, 255, 0.8));
 }
 
+/* ----------------------------
+       TABLET RESPONSIVE FIX
+-------------------------------*/
 @media screen and (max-width: 1023px) {
+
+    .banner .content .model {
+        height: 90vh;                 /* FIX */
+        background-size: contain;     /* FIX */
+        background-position: center bottom;  /* FIX */
+    }
+
     .banner .slider {
         width: 160px;
         height: 200px;
@@ -275,8 +277,7 @@ h3 {
     }
 
     .banner .slider .item {
-        transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
     }
 
     .banner .content h1 {
@@ -290,15 +291,23 @@ h3 {
         color: #fff;
         padding: 20px;
         text-shadow: 0 10px 20px #000;
-        z-index: 2;
-        max-width: unset;
         width: 100%;
         text-align: center;
         padding: 0 30px;
     }
 }
 
+/* ----------------------------
+       MOBILE RESPONSIVE FIX
+-------------------------------*/
 @media screen and (max-width: 767px) {
+
+    .banner .content .model {
+        height: 80vh;                 /* FIX */
+        background-size: contain;     /* FIX */
+        background-position: bottom center; /* FIX → HEAD VISIBLE */
+    }
+
     .banner .slider {
         width: 100px;
         height: 150px;
@@ -306,8 +315,7 @@ h3 {
     }
 
     .banner .slider .item {
-        transform:
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
     }
 
     .banner .content h1 {
@@ -315,8 +323,19 @@ h3 {
     }
 }
 
+/* ----------------------------
+   EXTRA SMALL PHONE FIX
+-------------------------------*/
+@media screen and (max-width: 480px) {
+    .banner .content .model {
+        height: 70vh;
+        background-size: contain;
+        background-position: center bottom;
+    }
+}
 
 /* 3d-slider section end */
+
 
 
 
@@ -918,13 +937,35 @@ h3 {
     color: beige;
 }
 
-.recentproject-grid {
+/* .recentproject-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+} */
+
+.recentproject-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
 }
+
+/* Mobile/tablet এ সুন্দরভাবে ভাঙবে */
+@media (max-width: 992px) {
+    .recentproject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .recentproject-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .recentproject-post {
     /* background: var(--white); */
